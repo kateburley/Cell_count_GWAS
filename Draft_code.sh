@@ -27,7 +27,7 @@ if [ "${batch}" -lt "1" ]; then
 	exit 1
 fi
 
-exec &> >(tee ${section_12_logfile}${batch})
+exec &> >(tee ${home_directory}/results/12/logs${batch})
 print_version
 
 age=`awk '{print $4}' <${gwas_covariates}.cellcounts.numeric |sort -u |wc -l`
