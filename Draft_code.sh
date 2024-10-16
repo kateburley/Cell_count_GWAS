@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+source ./config
+
 batch=${1}
 re='^[0-9]+$'
 ncellcounts=`wc -l ${home_directory}/results/02/cellcounts_summary.txt | awk '{ print $1 }'`
