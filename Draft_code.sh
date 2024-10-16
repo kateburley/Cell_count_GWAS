@@ -5,7 +5,7 @@ source ./config
 
 batch=${1}
 re='^[0-9]+$'
-ncellcounts=`wc -l ${home_directory}/results/02/cellcounts_summary.txt | awk '{ print $1 }'`
+ncellcounts=`wc -l ${home_directory}/results/03/cellcounts_summary.txt | awk '{ print $1 }'`
 if ! [[ $batch =~ $re ]] ; then
 	echo "error: Cell type variable is not valid"
 	echo "Please provide a number between 1 and ${ncellcounts}"
