@@ -43,11 +43,11 @@ then
 ${gcta} \
 	--bfile ${bfile} \
 	--mlma-loco \
-	--pheno ${cellcounts_plink} \
-	--qcovar ${gwas_covariates}.cellcounts.numeric \
-	--covar ${gwas_covariates}.cellcounts.factor \
+	--pheno ${home_directory}/processed_data/cellcounts/cellcounts.covariates.txt \
+	--qcovar ${home_directory}/processed_data/covariate_data/covariates_intersectids.txt \
+	--covar ${home_directory}/processed_data/covariate_data/covariates_intersectids.txt \
 	--autosome \
-	--out ${section_12_dir}/cellcount_${batch} \
+	--out ${home_directory}/results/12/cellcount_${batch} \
 	--thread-num ${nthreads} \
 	--mpheno ${batch}
 fi
