@@ -43,9 +43,9 @@ then
 ${gcta} \
 	--bfile ${bfile} \
 	--mlma-loco \
-	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.txt \
-	--qcovar ${home_directory}/processed_data/methylation_data/all_covariates.txt \
-	--covar ${home_directory}/processed_data/methylation_data/all_covariates.txt \
+	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
+	--qcovar ${home_directory}/processed_data/covariate_data/covariates_intersectids.txt \
+	--covar ${home_directory}/processed_data/covariate_data/covariates_intersectids.txt \
 	--autosome \
 	--out ${home_directory}/results/12/cellcount_${batch} \
 	--thread-num ${nthreads} \
