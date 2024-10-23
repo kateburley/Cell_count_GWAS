@@ -54,8 +54,8 @@ ${gcta} \
 	--bfile ${bfile} \
 	--mlma-loco \
 	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
-	--qcovar "$age" \
-	--covar "$sex" \
+	--qcovar ${gwas_covariates}.cellcounts.numeric \
+	--covar ${gwas_covariates}.cellcounts.factor \
 	--autosome \
 	--out ${home_directory}/results/12/cellcount_${batch} \
 	--thread-num ${nthreads} \
