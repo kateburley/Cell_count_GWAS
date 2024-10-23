@@ -33,7 +33,7 @@ print_version
 
 # Generate GWAS covariates plus INT cell counts
 echo "Generating GWA covariates"
-Rscript resources/genetics/create_cellcount_GWAS_files.R \
+Rscript resources/cellcounts/create_cellcount_GWAS_files.R \
 	${covariates_combined}.txt \
 	${smoking_pred}.txt \
 	${bfile}.fam \
