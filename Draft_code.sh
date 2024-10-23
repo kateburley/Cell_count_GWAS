@@ -2,7 +2,7 @@
 
 set -e
 source ./config
-
+ 
 batch=${1}
 re='^[0-9]+$'
 ncellcounts=`wc -l ${home_directory}/results/03/cellcounts_summary.txt | awk '{ print $1 }'`
@@ -30,6 +30,16 @@ fi
 exec &> >(tee ${home_directory}/results/12/logs${batch})
 print_version
 
+# GWAS Covariates
+echo "Generating GWA covariates"
+Rscript resources/genetics/create_covariates_files.R \
+	${covariates_combined}.txt \
+	${age_pred}.txt \
+	${smoking_pred}.txt \
+	${bfile}.fam \
+	${gwas_covariates} \
+	${covariates}
+ 
 age=`awk '{print $2}' <${home_directory}/processed_data/covariate_data/covariates_intersectids.txt |sort -u |wc -l`
 echo "Age variable has $age levels"
 
