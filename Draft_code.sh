@@ -40,10 +40,10 @@ Rscript resources/cellcounts/create_cellcount_GWAS_files.R \
 	${gwas_covariates} \
 	${covariates}
  
-age=`awk '{print $2}' <${home_directory}/processed_data/covariate_data/covariates_intersectids.txt |sort -u |wc -l`
+age=`awk '{print $4}' <${gwas_covariates}.cellcounts.numeric |sort -u |wc -l`
 echo "Age variable has $age levels"
 
-sex=`awk '{print $3}' <${home_directory}/processed_data/covariate_data/covariates_intersectids.txt |sort -u |wc -l`
+sex=`awk '{print $3}' <${gwas_covariates}.cellcounts.factor |sort -u |wc -l`
 echo "Sex variable has $sex levels"
 
 n23=`grep ^23 ${bfile}.bim | wc -l`
