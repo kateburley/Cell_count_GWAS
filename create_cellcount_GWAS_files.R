@@ -37,4 +37,7 @@ if(length(covnames) > 0)
 names(dat)[names(dat) == "Smoking"] <- "Smoking_numeric"
 write_covs(dat, paste0(out_file, ".cellcounts"))
 
-# Create cell counts files for cellcounts GWAS and do inverse normal transformation
+# Create cell counts files for cellcounts GWAS - exclude outliers and transform data
+
+
+
