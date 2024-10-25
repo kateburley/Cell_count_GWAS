@@ -68,7 +68,7 @@ ${gcta} \
 	--bfile ${bfile} \
 	--chr 23 \
 	--mlma \
-	--pheno ${cellcounts_plink} \
+	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
 	--qcovar ${gwas_covariates}.cellcounts.numeric \
 	--covar ${gwas_covariates}.cellcounts.factor \
 	--grm ${grmfile_all} \
@@ -84,7 +84,7 @@ then
 ${gcta} \
 	--bfile ${bfile} \
 	--mlma-loco \
-	--pheno ${cellcounts_plink} \
+	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
 	--qcovar ${gwas_covariates}.cellcounts.numeric \
 	--autosome \
 	--out ${section_12_dir}/cellcount_${batch} \
@@ -98,7 +98,7 @@ ${gcta} \
 	--bfile ${bfile} \
 	--chr 23 \
 	--mlma \
-	--pheno ${cellcounts_plink} \
+	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
 	--qcovar ${gwas_covariates}.cellcounts.numeric \
 	--grm ${grmfile_all} \
 	--out ${section_12_dir}/cellcount_${batch}_chr23 \
@@ -117,7 +117,7 @@ then
 ${gcta} \
 	--bfile ${bfile} \
 	--mlma-loco \
-	--pheno ${cellcounts_plink} \
+	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
 	--covar ${gwas_covariates}.cellcounts.factor \
 	--autosome \
 	--out ${section_12_dir}/cellcount_${batch} \
@@ -131,7 +131,7 @@ ${gcta} \
 	--bfile ${bfile} \
 	--chr 23 \
 	--mlma \
-	--pheno ${cellcounts_plink} \
+	--pheno ${home_directory}/processed_data/methylation_data/all_covariates.plink \
 	--covar ${gwas_covariates}.cellcounts.factor \
 	--grm ${grmfile_all} \
 	--out ${section_12_dir}/cellcount_${batch}_chr23 \
