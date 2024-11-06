@@ -153,7 +153,7 @@ gzip -f ${section_12_dir}/cellcount_${batch}.loco.mlma
 echo "Making plots"
 Rscript resources/genetics/plot_gwas.R \
 	${section_12_dir}/cellcount_${batch}.loco.mlma.gz \
-	9 \
+	10 \
 	1 \
 	3 \
  	2 \
