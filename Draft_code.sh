@@ -156,11 +156,11 @@ Rscript Cell_count_gwas/plot_gwas2.R \
 	9 \
 	1 \
 	3 \
- 	2 \
 	TRUE \
 	0 \
 	0 \
 	0 \
-	0 \
+ 	0 \
+  	${section_12_dir}/cellcount_${batch}.loco.mlma \  	
 
 echo "Successfully performed GWAS for cell type ${batch}"
