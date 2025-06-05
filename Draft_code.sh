@@ -1,4 +1,4 @@
-#!/bin/bash
+c#!/bin/bash
 
 set -e
 source ./config
@@ -151,7 +151,7 @@ echo "Compressing results"
 gzip -f ${section_12_dir}/cellcount_${batch}.loco.mlma
 
 echo "Making plots"
-Rscript Cell_count_gwas/plot_gwas2.R \
+Rscript Cell_count_gwas/plot_cellcount_gwas.R \
 	${section_12_dir}/cellcount_${batch}.loco.mlma.gz \
 	9 \
 	1 \
