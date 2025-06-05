@@ -1,5 +1,5 @@
 echo "Making plots"
-Rscript resources/genetics/plot_gwas.R \
+Rscript Cell_count_gwas/plot_gwas2.R \
 	${section_12_dir}/cellcount_${batch}.loco.mlma.gz \
 	10 \
 	1 \
